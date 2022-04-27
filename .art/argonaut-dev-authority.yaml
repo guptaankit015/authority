@@ -13,13 +13,6 @@ services:
         - "authority.pp.argonaut.live"
       hostPort: 443
       paths: ["/"]
-  - port: 8000
-    protocol: "http" # tls-passthrough, tls-terminated, tcp, http, grpc need to be supported
-    external:
-      hosts:
-        - "authority.pp.argonaut.live"
-      hostPort: 443
-      paths: ["/"]
 
 argonaut:
   env: dev
