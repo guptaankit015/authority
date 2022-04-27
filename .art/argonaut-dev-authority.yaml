@@ -5,6 +5,15 @@ image: "170982004044.dkr.ecr.us-east-2.amazonaws.com/argonaut/authority"
 imageTag: "latest"
 
 
+services:
+  - port: 8000
+    protocol: "http" # tls-passthrough, tls-terminated, tcp, http, grpc need to be supported
+    external:
+      hosts:
+        - "authority.pp.argonaut.live"
+      hostPort: 443
+      paths: ["/"]
+
 argonaut:
   env: dev
   region: us-east-2
