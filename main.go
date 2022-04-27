@@ -10,5 +10,5 @@ func main() {
 	router := gin.Default()
 	router.GET("/health", internal.HealthCheck)
 
-	router.Run("localhost:8000")
+	router.Run("0.0.0.0:8000")
 }
